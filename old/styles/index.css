@@ -1,0 +1,145 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 0.9rem;
+
+	/* color: white; */
+}
+
+body {
+	background: rgb(12, 12, 12);
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.app {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	/* display: grid;
+	place-items: center; */
+
+	flex-direction: column;
+	position: relative;
+	min-height: 650px;
+	min-width: 350px;
+	max-width: 600px;
+	max-height: 900px;
+	background: rgb(39, 39, 39);
+}
+
+.settings_icon {
+	height: 30px;
+	position: absolute;
+	left: 5px;
+	top: 0px;
+	z-index: 1;
+}
+
+.settings {
+	display: grid;
+	place-items: center;
+	width: 100%;
+}
+
+.settings_header {
+	color: white;
+	font-size: 20px;
+	margin: 0 0 15px 0;
+}
+
+.settings_sortBy {
+	color: white;
+	width: 300px;
+	/* background: green; */
+	padding: 10px;
+	margin: 10px;
+	border: 1px grey solid;
+	border-radius: 10px;
+	position: relative;
+	background: rgb(27, 27, 27);
+}
+
+.settings_sortBy_header {
+	position: absolute;
+	top: -20px;
+}
+
+.settings_sortBy_options_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.settings_sortBy_option {
+	margin: 0 10px;
+	padding: 5px 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	background: rgb(128, 128, 128);
+	/* border: 1px solid white; */
+}
+
+.view_note {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-items: center;
+
+}
+
+.view_note_gap_fill {
+	height: 50px;
+	width: 100%;
+}
+
+.view_note_content_parent {
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	max-width: 500px;
+	margin:0 0 0 20px;
+	/* padding: 0 20px; */
+}
+
+.view_note_content_child{
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	color: white;
+	box-sizing: content-box;
+}
+
+.view_note_title {
+	margin: 0 0 20px 0;
+	font-size: 1.5rem;
+	margin: 20px 0 20px 0;
+}
+
+.view_note_title,
+.view_note_content,
+.view_note_exit_button {
+	color: white;
+}
+
+.view_note_exit_button {
+	position: absolute;
+	bottom: 10px;
+	left: 15px;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.view_note_settings {
+	height: 40px;
+	position: absolute;
+	top: 0;
+	right: 0px;
+	cursor: pointer;
+}

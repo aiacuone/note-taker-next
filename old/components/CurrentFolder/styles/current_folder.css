@@ -1,0 +1,833 @@
+.current_page {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+
+.current_folder_header {
+	/* height: 20%; */
+	width: 100%;
+	background: rgb(51, 51, 51);
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-direction: column;
+	z-index: 10;
+	/* background: orange; */
+	/* filter: drop-shadow(0px 20px 10px rgb(24, 24, 24)); */
+	padding: 10px 0;
+}
+
+.current_page_nav {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	/* background: green; */
+	/* height: 50px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* background: purple; */
+}
+
+.current_page_nav_button {
+	cursor: pointer;
+	/* color: rgb(56, 56, 56); */
+	color: white;
+}
+
+.current_page_nav_button.back {
+	position: absolute;
+	left: 10px;
+	height: 30px;
+	/* top: 0px; */
+	color: white;
+	/* margin: 5px 0 0 0; */
+	/* font-size:15px; */
+	/* background: green; */
+	padding: 5px 20px;
+	/* background: blue; */
+}
+
+.current_page_directory {
+	width: 300px;
+	height: 30px;
+	white-space: nowrap;
+	display: grid;
+	place-items: center;
+	/* background: green; */
+	margin: 5px 0 0 0;
+}
+
+.current_page_directory_wrapper_parent {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.current_page_directory_wrapper_child {
+	padding-top: 7px;
+	width: 100%;
+	height: 100%;
+	overflow-x: scroll;
+	box-sizing: content-box;
+	display: grid;
+	place-items: center;
+}
+
+.current_page_title,
+.current_page_directory {
+	color: white;
+}
+
+.current_page_title {
+	font-size: 17px;
+	width: 300px;
+	height: 30px;
+	display: grid;
+	place-items: center;
+	/* background: purple; */
+}
+
+.current_page_title_parent {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.current_page_title_child {
+	padding-top: 3px;
+	width: 100%;
+	height: 100%;
+	box-sizing: content-box;
+	display: grid;
+	place-items: center;
+	overflow-x: scroll;
+	font-size: 1.3rem;
+}
+
+.current_page_folders_container {
+	width: 100%;
+	overflow: hidden;
+	display: grid;
+	place-items: center;
+}
+
+.current_page_folders_wrapper_parent {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.current_page_folders_wrapper_child {
+	width: 100%;
+	height: 100%;
+	overflow-x: scroll;
+	box-sizing: content-box;
+	display: grid;
+	place-items: center;
+	padding-top: 5px;
+}
+
+.current_page_folders {
+	display: grid;
+	place-items: center;
+	grid-auto-flow: column;
+	/* background: green; */
+}
+
+.current_page_folder_menu_folder {
+	/* display: flex; */
+	/* justify-content: center;
+	align-items: center; */
+	margin: 0px 10px;
+	padding: 5px 10px;
+	border-radius: 3px;
+	white-space: nowrap;
+	cursor: pointer;
+	/* background: green; */
+}
+
+.current_page_folder_menu_title {
+	color: white;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
+}
+
+.current_page_add_folder_input_field,
+.current_page_add_folder_input_button {
+	color: black;
+}
+
+.current_page_add_folder_input {
+	background: white;
+	padding: 5px;
+	border: 1px white solid;
+	border-radius: 5px;
+	/* color: 	 rgb(39, 39, 39); */
+	color: black;
+	text-align: center;
+	/* margin: 0 0 100px 0; */
+	/* position: absolute; */
+	/* right: 10px; */
+	/* top: 10px; */
+	/* background: green; */
+	min-width: 300px;
+}
+
+.current_page_add_folder_input:active {
+	border: 1px solid rgb(87, 87, 87);
+	border-radius: 5px;
+
+	border-radius: 5px;
+}
+
+.main_section_container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: safe center;
+	align-items: center;
+	position: relative;
+	background: rgb(19, 19, 19);
+}
+
+.notes_header {
+	height: 50px;
+	width: 100%;
+	/* background: purple; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* position: absolute; */
+	top: 0;
+	left: 0;
+}
+
+.selected_folder_settings {
+	/* background: green; */
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.selected_folder_settings_title {
+	padding: 0 5px;
+	border-bottom: 1px solid white;
+	margin: 0 0 10px 0;
+	font-size: 20px;
+}
+
+.current_folder_folder_option {
+	border: 1px solid white;
+	border-radius: 10px;
+	margin: 30px;
+	padding: 5px 20px;
+	cursor: pointer;
+	font-size: 17px;
+	color: white;
+}
+
+.current_folder_folder_settings_delete_options {
+	display: flex;
+	color: white;
+	/* background: green; */
+}
+
+.current_folder_folder_settings_delete_option {
+	font-size: 20px;
+	margin: 5px 7px;
+	cursor: pointer;
+}
+
+.current_folder_folder_settings_delete_option.yes {
+	color: red;
+}
+
+.current_folder_folder_settings_delete_delete {
+	color: red;
+	font-size: 20px;
+	border: 1px red solid;
+	border-radius: 15px;
+	padding: 5px 20px;
+	cursor: pointer;
+}
+
+.current_folder_folder_settings_rename_input {
+	color: black;
+}
+
+.current_folder_folder_settings_color_option {
+	height: 25px;
+	width: 100px;
+	margin: 2.5vh 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.current_folder_folders {
+	background: green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 0 0 5px 0;
+	overflow: scroll;
+}
+
+.current_folder_add_note {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* flex-direction: column; */
+	position: absolute;
+	right: 30px;
+	cursor: pointer;
+	color: white;
+}
+
+.current_folder_add_note_img {
+	height: 18px;
+	margin: 0 5px 0 0;
+}
+
+.add_button_submit {
+	margin: 10px 0 0 0;
+	color: white;
+	border: 1px white solid;
+	padding: 5px 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.sun_editor {
+	color: black;
+	/* background: green; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* height: 100%; */
+	/* width: 100%; */
+	/* padding: 10px; */
+	/* height: 700px; */
+	/* width: 200px; */
+}
+
+.add_note_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* background: green; */
+	height: 100%;
+	width: 100%;
+}
+
+.notes_container {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	cursor: context-menu;
+	color: white;
+	/* background: blue; */
+	overflow: hidden;
+}
+
+.add_note_button_text {
+	font-size: 11px;
+}
+
+.confirm_delete {
+	color: white;
+}
+
+.add_note_exit_button {
+	color: white;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+
+.curret_page_note {
+	margin: 20px 0;
+	background: rgb(51, 51, 51);
+	width: 90%;
+	max-width: 500px;
+	padding: 20px;
+	position: relative;
+	/* border-radius: 10px; */
+	filter: drop-shadow(0 0 10px rgb(15, 15, 15));
+	cursor: pointer;
+	max-height: 500px;
+	overflow: hidden;
+	/* background: blue; */
+}
+
+/* .curret_page_note:last-child:after{
+	content: "";
+  width: 30px;
+  height: 200px;
+  position: absolute;
+  background: blue;
+  left: 0px;
+  bottom: -150px;
+} */
+
+.curret_page_notes {
+	width: 100%;
+	height: 100%;
+	/* grid-auto-rows: max-content; */
+	word-wrap: break-word;
+	overflow: hidden;
+	padding: 0 0 0 20px;
+}
+
+.curret_page_notes_wrapper_parent {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.curret_page_notes_wrapper_child {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	box-sizing: content-box;
+	display: grid;
+	place-items: center;
+	grid-auto-rows: max-content;
+}
+
+.current_notes_gap_fill_top {
+	/* position: absolute; */
+	/* bottom: 0; */
+	width: 100%;
+	height: 80px;
+	/* background: green; */
+}
+
+.current_notes_gap_fill_bottom {
+	width: 100%;
+	height: 100px;
+}
+
+.current_folder_note_menu_button {
+	position: absolute;
+	height: 30px;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+.current_folder_note_settings_button {
+	/* background: green; */
+	margin: 30px 0;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	padding: 5px;
+}
+
+.current_folder_note_settings_button.delete {
+	color: red;
+}
+
+.curret_page_note_title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background: yellow; */
+	margin: 0 0 20px 0;
+	font-size: 17px;
+}
+
+.curret_page_note_text {
+	/* background: green; */
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+
+.notes_nav_container {
+	display: grid;
+	place-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 60px;
+	position: relative;
+	/* background: rgb(51, 51, 51); */
+	/* background: green; */
+	/* overflow: scroll; */
+}
+
+.current_folder_add_folder_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* flex-direction: column; */
+	/* margin: 0 10px 0 0; */
+	position: absolute;
+	right: 10px;
+	/* top: 0px; */
+	cursor: pointer;
+	/* background: green; */
+	padding: 5px 15px;
+}
+
+.current_folder_add_folder_img {
+	height: 15px;
+	margin: 0 5px 0 0;
+}
+
+.current_folder_add_folder_text {
+	color: white;
+	white-space: nowrap;
+}
+
+.current_page_add_folder_input_container {
+	/* height: 100%;
+	width: 100%; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* background: green; */
+	margin: 0 0 150px 0;
+	position: relative;
+}
+.current_page_add_folder_input_title {
+	color: white;
+	margin: 0 0 10px 0;
+}
+
+.current_page_add_folder_input_add {
+	color: white;
+	margin: 10px 0 0 0;
+	border: white 1px solid;
+	padding: 2px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.scroll {
+	height: 50px;
+	width: 550px;
+	overflow: scroll;
+	cursor: pointer;
+	/* white-space: normal; */
+	/* word-wrap: break-word; */
+}
+
+.current_folder_settings_header {
+	/* background: green; */
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.current_folder_footer {
+	position: absolute;
+	display: grid;
+	place-items: center;
+	bottom: 0;
+	width: 100%;
+	background: rgb(39, 39, 39);
+	filter: drop-shadow(0px -20px 10px rgb(24, 24, 24));
+}
+
+.current_folder_footer_nav {
+	width: 100%;
+	/* height: 100%; */
+	/* display: grid;
+	place-items: center; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background: green; */
+	padding: 10px 0;
+	/* background: grey; */
+}
+
+.current_folder_footer_menu_button {
+	position: absolute;
+	left: 40px;
+	height: 30px;
+	cursor: pointer;
+	/* background: green; */
+	/* background: orange; */
+}
+
+.current_folder_folder_settings_colors_container {
+	margin-top: 100px;
+	/* background: green; */
+}
+
+.current_folder_delete_note_confirm_container {
+	display: flex;
+}
+
+.current_folder_delete_note {
+	display: grid;
+	place-items: center;
+}
+
+.current_folder_delete_note_confirm {
+	color: white;
+	margin: 0 5px;
+	font-size: 30px;
+}
+.current_folder_delete_note_confirm.yes,
+.confirm_no {
+	cursor: pointer;
+}
+
+.current_folder_delete_note_confirm.yes {
+	color: red;
+}
+
+.current_folder_delete_note_p {
+	color: white;
+}
+
+.current_folder_rename_note_container {
+	display: grid;
+	place-items: center;
+}
+
+.current_folder_rename_note_input {
+	text-align: center;
+	font-size: 20px;
+}
+
+.current_folder_rename_note_button {
+	color: white;
+	margin: 10px 0;
+	border: 1px white solid;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 12px;
+}
+
+.current_folder_edit_note {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	/* place-items: center; */
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* background: green; */
+}
+
+.current_folder_edit_note_exit {
+	color: white;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	/* background: green; */
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.current_folder_edit_note_input,
+.add_note_input {
+	margin: 0 0 20px 0;
+	text-align: center;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	font-size: 15px;
+	width: 400px;
+}
+
+.current_folder_edit_note_edit_button {
+	color: white;
+	border: 1px white solid;
+	border-radius: 5px;
+	padding: 2px 10px;
+	margin: 10px 0 0 0;
+	cursor: pointer;
+}
+
+.current_folder_edit_note_delete_button {
+	height: 25px;
+	position: absolute;
+	right: 70px;
+	top: 5px;
+	cursor: pointer;
+}
+
+.current_folder_edit_note_exit_confirm {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.287);
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* background: white; */
+}
+
+.current_folder_edit_note_exit_confirm_container {
+	background: white;
+	display: grid;
+	place-items: center;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.current_folder_edit_note_exit_confirm p {
+	color: rgb(71, 71, 71);
+}
+
+.add_note_input_wrapper,
+.current_folder_edit_note_wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.current_folder_add_note_warning {
+	display: grid;
+	place-items: center;
+	position: absolute;
+	top: -40px;
+	background: white;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.current_folder_add_note_warning_point {
+	position: absolute;
+	width: 15px;
+	bottom: -10px;
+}
+
+.confirm_delete_container {
+	display: grid;
+	place-items: center;
+	position: relative;
+}
+
+.current_folder_folder_settings_rename {
+	background: green;
+	display: grid;
+	place-items: center;
+}
+
+.current_folder_folder_settings_add {
+	color: white;
+}
+
+.current_add_folder_addcolors {
+	width: 100%;
+	display: flex;
+}
+
+.current_folder_color_option {
+	height: 30px;
+	width: 45px;
+	border-radius: 2px;
+	cursor: pointer;
+	margin: 10px 5px;
+}
+
+.current_edit_folder_delete_button {
+	height: 40px;
+	position: absolute;
+	bottom: -150px;
+	cursor: pointer;
+	/* left: 50px; */
+}
+
+.confirm_delete_container_delete {
+	position: absolute;
+	bottom: -40px;
+	color: red;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.settings_option {
+	color: white;
+	width: 300px;
+	/* background: green; */
+	padding: 10px;
+	margin: 20px 0;
+	border: 1px grey solid;
+	border-radius: 10px;
+	position: relative;
+	background: rgb(27, 27, 27);
+}
+
+.settings_option_header {
+	position: absolute;
+	top: -20px;
+}
+
+.settings_options_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.current_note_dots_container {
+	display: flex;
+	/* place-items: center; */
+	justify-content: center;
+	align-items: center;
+	height: 20px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background: rgb(51, 51, 51);
+	/* margin: 0 0 20px; */
+}
+
+.current_note_dots_wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.current_note_dots {
+	/* height: 30px; */
+	width: 100px;
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* padding: 0 0 10px 0; */
+}
+
+.current_folders_section_gap_fill {
+	width: 50px;
+	height: 100%;
+	/* background: blue; */
+}
